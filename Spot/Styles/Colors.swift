@@ -26,6 +26,7 @@ struct Colors {
     static let purple = UIColor(rgb: 0xFFA776DA)
     static let blue = UIColor(rgb: 0xFF00BFFF)
     static let orange = UIColor(rgb: 0xFFFF7A00)
+    static let green = UIColor(rgb: 0xFF4CAF50)
     
     // text colors
     static let dark = UIColor(rgb: 0xFF121416)

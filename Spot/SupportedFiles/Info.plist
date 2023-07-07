@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>arimo_bold.ttf</string>
-		<string>arimo_bolditalic.ttf</string>
-		<string>arimo_italic.ttf</string>
-		<string>arimo_medium.ttf</string>
-		<string>arimo_mediumitalic.ttf</string>
-		<string>arimo_regular.ttf</string>
-		<string>arimo_semibold.ttf</string>
-		<string>arimo_semibolditalic.ttf</string>
-	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

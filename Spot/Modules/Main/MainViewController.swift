@@ -18,9 +18,8 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.tintColor = Colors.dark
+        tabBar.tintColor = Colors.green
         tabBar.unselectedItemTintColor = Colors.placeholder
-        tabBar.backgroundColor = .white
         tabBar.layer.addSublayer(seperator)
         viewControllers = [
             setupViewController(rootViewController: FeedViewController(),

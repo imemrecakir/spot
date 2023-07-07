@@ -14,17 +14,8 @@
 		304F471F2A56D8C400AE6DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304F471E2A56D8C400AE6DB5 /* Assets.xcassets */; };
 		304F47222A56D8C400AE6DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304F47202A56D8C400AE6DB5 /* LaunchScreen.storyboard */; };
 		304F47402A5701A500AE6DB5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F473F2A5701A500AE6DB5 /* Colors.swift */; };
-		304F47422A5701B100AE6DB5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47412A5701B100AE6DB5 /* Fonts.swift */; };
 		304F47442A5701BA00AE6DB5 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47432A5701BA00AE6DB5 /* Animations.swift */; };
 		304F47462A5701CA00AE6DB5 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47452A5701CA00AE6DB5 /* Icons.swift */; };
-		304F474F2A57020100AE6DB5 /* arimo_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F47472A57020000AE6DB5 /* arimo_regular.ttf */; };
-		304F47502A57020100AE6DB5 /* arimo_semibolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F47482A57020000AE6DB5 /* arimo_semibolditalic.ttf */; };
-		304F47512A57020100AE6DB5 /* arimo_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F47492A57020000AE6DB5 /* arimo_italic.ttf */; };
-		304F47522A57020100AE6DB5 /* arimo_mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F474A2A57020000AE6DB5 /* arimo_mediumitalic.ttf */; };
-		304F47532A57020100AE6DB5 /* arimo_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F474B2A57020000AE6DB5 /* arimo_medium.ttf */; };
-		304F47542A57020100AE6DB5 /* arimo_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F474C2A57020000AE6DB5 /* arimo_bold.ttf */; };
-		304F47552A57020100AE6DB5 /* arimo_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F474D2A57020000AE6DB5 /* arimo_semibold.ttf */; };
-		304F47562A57020100AE6DB5 /* arimo_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304F474E2A57020000AE6DB5 /* arimo_bolditalic.ttf */; };
 		304F47592A57593B00AE6DB5 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47582A57593B00AE6DB5 /* UIColor+Ext.swift */; };
 		304F475B2A575B1F00AE6DB5 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F475A2A575B1F00AE6DB5 /* NavigationManager.swift */; };
 		304F475D2A575B8B00AE6DB5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F475C2A575B8B00AE6DB5 /* BaseNavigationController.swift */; };
@@ -44,6 +35,7 @@
 		304F47792A57636500AE6DB5 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47782A57636500AE6DB5 /* NotificationsViewController.swift */; };
 		304F477B2A57636C00AE6DB5 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F477A2A57636C00AE6DB5 /* NotificationsViewModel.swift */; };
 		304F477D2A5763DE00AE6DB5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F477C2A5763DE00AE6DB5 /* MainViewModel.swift */; };
+		304F477F2A5798C300AE6DB5 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F477E2A5798C300AE6DB5 /* UIApplication+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,17 +48,8 @@
 		304F47212A56D8C400AE6DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		304F47232A56D8C400AE6DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		304F473F2A5701A500AE6DB5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		304F47412A5701B100AE6DB5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		304F47432A5701BA00AE6DB5 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		304F47452A5701CA00AE6DB5 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
-		304F47472A57020000AE6DB5 /* arimo_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_regular.ttf; sourceTree = "<group>"; };
-		304F47482A57020000AE6DB5 /* arimo_semibolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_semibolditalic.ttf; sourceTree = "<group>"; };
-		304F47492A57020000AE6DB5 /* arimo_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_italic.ttf; sourceTree = "<group>"; };
-		304F474A2A57020000AE6DB5 /* arimo_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_mediumitalic.ttf; sourceTree = "<group>"; };
-		304F474B2A57020000AE6DB5 /* arimo_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_medium.ttf; sourceTree = "<group>"; };
-		304F474C2A57020000AE6DB5 /* arimo_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_bold.ttf; sourceTree = "<group>"; };
-		304F474D2A57020000AE6DB5 /* arimo_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_semibold.ttf; sourceTree = "<group>"; };
-		304F474E2A57020000AE6DB5 /* arimo_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arimo_bolditalic.ttf; sourceTree = "<group>"; };
 		304F47582A57593B00AE6DB5 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		304F475A2A575B1F00AE6DB5 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		304F475C2A575B8B00AE6DB5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -86,6 +69,7 @@
 		304F47782A57636500AE6DB5 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		304F477A2A57636C00AE6DB5 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		304F477C2A5763DE00AE6DB5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		304F477E2A5798C300AE6DB5 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +149,7 @@
 				304F47582A57593B00AE6DB5 /* UIColor+Ext.swift */,
 				304F47622A575FC900AE6DB5 /* UIViewController+Ext.swift */,
 				304F47642A57602500AE6DB5 /* UIResponder+Ext.swift */,
+				304F477E2A5798C300AE6DB5 /* UIApplication+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,7 +172,6 @@
 		304F472E2A57007900AE6DB5 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				304F473B2A57018300AE6DB5 /* Fonts */,
 				304F473F2A5701A500AE6DB5 /* Colors.swift */,
 				304F47432A5701BA00AE6DB5 /* Animations.swift */,
 				304F47452A5701CA00AE6DB5 /* Icons.swift */,
@@ -288,30 +272,6 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
-		304F473B2A57018300AE6DB5 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				304F47412A5701B100AE6DB5 /* Fonts.swift */,
-				304F47572A57021600AE6DB5 /* Arimo */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		304F47572A57021600AE6DB5 /* Arimo */ = {
-			isa = PBXGroup;
-			children = (
-				304F474C2A57020000AE6DB5 /* arimo_bold.ttf */,
-				304F474E2A57020000AE6DB5 /* arimo_bolditalic.ttf */,
-				304F47492A57020000AE6DB5 /* arimo_italic.ttf */,
-				304F474B2A57020000AE6DB5 /* arimo_medium.ttf */,
-				304F474A2A57020000AE6DB5 /* arimo_mediumitalic.ttf */,
-				304F47472A57020000AE6DB5 /* arimo_regular.ttf */,
-				304F474D2A57020000AE6DB5 /* arimo_semibold.ttf */,
-				304F47482A57020000AE6DB5 /* arimo_semibolditalic.ttf */,
-			);
-			path = Arimo;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,15 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304F47542A57020100AE6DB5 /* arimo_bold.ttf in Resources */,
-				304F47512A57020100AE6DB5 /* arimo_italic.ttf in Resources */,
 				304F47222A56D8C400AE6DB5 /* LaunchScreen.storyboard in Resources */,
-				304F47552A57020100AE6DB5 /* arimo_semibold.ttf in Resources */,
-				304F47562A57020100AE6DB5 /* arimo_bolditalic.ttf in Resources */,
-				304F47522A57020100AE6DB5 /* arimo_mediumitalic.ttf in Resources */,
-				304F474F2A57020100AE6DB5 /* arimo_regular.ttf in Resources */,
-				304F47502A57020100AE6DB5 /* arimo_semibolditalic.ttf in Resources */,
-				304F47532A57020100AE6DB5 /* arimo_medium.ttf in Resources */,
 				304F471F2A56D8C400AE6DB5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,11 +361,11 @@
 				304F47772A57630D00AE6DB5 /* FeedViewModel.swift in Sources */,
 				304F477D2A5763DE00AE6DB5 /* MainViewModel.swift in Sources */,
 				304F475F2A575BB100AE6DB5 /* BaseViewController.swift in Sources */,
-				304F47422A5701B100AE6DB5 /* Fonts.swift in Sources */,
 				304F47612A575BC900AE6DB5 /* BaseViewModel.swift in Sources */,
 				304F47592A57593B00AE6DB5 /* UIColor+Ext.swift in Sources */,
 				304F476F2A5761E200AE6DB5 /* SettingsViewModel.swift in Sources */,
 				304F475D2A575B8B00AE6DB5 /* BaseNavigationController.swift in Sources */,
+				304F477F2A5798C300AE6DB5 /* UIApplication+Ext.swift in Sources */,
 				304F471D2A56D8C200AE6DB5 /* Spot.xcdatamodeld in Sources */,
 				304F47442A5701BA00AE6DB5 /* Animations.swift in Sources */,
 				304F475B2A575B1F00AE6DB5 /* NavigationManager.swift in Sources */,
@@ -563,8 +515,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,8 +547,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

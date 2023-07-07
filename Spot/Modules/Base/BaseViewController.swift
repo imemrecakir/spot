@@ -52,7 +52,7 @@ class BaseViewControllerClass<VM>: UIViewController where VM: BaseViewModel {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+
         hideKeyboardWhenTappedAround()
         
         guard let controller = self as? BaseViewController<VM> else {
