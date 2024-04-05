@@ -7,4 +7,18 @@
 
 import Foundation
 
-final class AddViewModel: BaseViewModel {}
+protocol AddViewModelDelegate: AnyObject {
+    func isLoading(_ isLoading: Bool)
+}
+
+final class AddViewModel: BaseViewModel {
+    
+    weak var delegate: AddViewModelDelegate?
+    
+    let router: AddRouter
+    
+    init(router: AddRouter) {
+        self.router = router
+        super.init()
+    }
+}

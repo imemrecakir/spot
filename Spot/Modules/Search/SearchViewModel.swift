@@ -7,4 +7,18 @@
 
 import Foundation
 
-final class SearchViewModel: BaseViewModel {}
+protocol SearchViewModelDelegate: AnyObject {
+    func isLoading(_ isLoading: Bool)
+}
+
+final class SearchViewModel: BaseViewModel {
+    
+    weak var delegate: SearchViewModelDelegate?
+    
+    let router: SearchRouter
+    
+    init(router: SearchRouter) {
+        self.router = router
+        super.init()
+    }
+}

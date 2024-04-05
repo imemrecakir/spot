@@ -12,8 +12,6 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        setTabBarStyle()
         setNavigationBarStyle()
         return true
     }
@@ -77,28 +75,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    func setNavigationBarStyle() {
-        let appearance = UINavigationBarAppearance()
-        
-        appearance.configureWithOpaqueBackground()
-        appearance.shadowImage = Colors.border.as1ptImage()
-        
-        appearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -6)
-        let attributes = [
-            NSAttributedString.Key.font: Fonts.semiBold.of(.size18)
-        ]
-        appearance.titleTextAttributes = attributes
-        let backButtonImage = UIImage(systemName: "arrow.backward.circle")?.withRenderingMode(.alwaysOriginal)
-            .withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -6, bottom: -2, right: 0))
-        
-        appearance.setBackIndicatorImage(backButtonImage, transitionMaskImage: backButtonImage)
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
-    func setTabBarStyle() {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 9)],
-                                                         for: .normal)
+    private func setNavigationBarStyle() {
+        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationItem().largeTitleDisplayMode = .always
+        UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
     }
 }
 

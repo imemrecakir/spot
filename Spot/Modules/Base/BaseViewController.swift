@@ -12,50 +12,31 @@ protocol BaseViewControllerProtocol {
     func setupConstraints()
 }
 
-typealias BaseViewController<VM> = BaseViewControllerProtocol & BaseViewControllerClass<VM> where VM: BaseViewModel
+typealias BaseViewController = BaseViewControllerProtocol & BaseViewControllerClass
 
-class BaseViewControllerClass<VM>: UIViewController where VM: BaseViewModel {
-    var viewModel: VM!
+class BaseViewControllerClass: UIViewController {
     
-    var isNavigationBarHidden: Bool? = false
-    var isLightStatusBar = false
-    
-    var isNavigationBarSeperatorHidden: Bool? = false {
-        didSet {
-            if let isNavigationBarSeperatorHidden, !isNavigationBarSeperatorHidden {
-                // TODO: change navbar seperator dynamically
-                print("isNavigationBarSeperatorHidden changed")
-            }
-        }
-    }
-
-    deinit {
-        print("Deinit called: \(String(describing: self))")
-    }
-    
-    private let loadingView: UIView = {
+    private let activityIndicatorContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = .systemBackground.withAlphaComponent(0.4)
         view.alpha = 0.15
         view.isHidden = true
         return view
     }()
 
-    private let activityIndicatiorView: UIActivityIndicatorView = {
-        let activityIndicatiorView = UIActivityIndicatorView()
-        activityIndicatiorView.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicatiorView.clipsToBounds = true
-        activityIndicatiorView.style = .large
-        return activityIndicatiorView
+    private let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.color = .label
+        return activityIndicator
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .systemBackground
         hideKeyboardWhenTappedAround()
-        
-        guard let controller = self as? BaseViewController<VM> else {
+        guard let controller = self as? BaseViewController else {
             return
         }
 
@@ -66,48 +47,65 @@ class BaseViewControllerClass<VM>: UIViewController where VM: BaseViewModel {
     }
 
     private func setupBaseUI() {
-        view.addSubview(loadingView)
-        view.addSubview(activityIndicatiorView)
+        view.addSubview(activityIndicatorContainer)
+        view.addSubview(activityIndicator)
     }
 
     private func setupBaseConstraint() {
         NSLayoutConstraint.activate([
-            loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            loadingView.topAnchor.constraint(equalTo: view.topAnchor),
-            loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            activityIndicatorContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            activityIndicatorContainer.topAnchor.constraint(equalTo: view.topAnchor),
+            activityIndicatorContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            activityIndicatorContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
-            activityIndicatiorView.heightAnchor.constraint(equalToConstant: 48),
-            activityIndicatiorView.widthAnchor.constraint(equalToConstant: 48),
-            activityIndicatiorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicatiorView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            activityIndicator.centerXAnchor.constraint(equalTo: activityIndicatorContainer.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: activityIndicatorContainer.centerYAnchor),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 48),
+            activityIndicator.widthAnchor.constraint(equalToConstant: 48)
         ])
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setNeedsStatusBarAppearanceUpdate()
-        if let isNavigationBarHidden {
-            self.navigationController?.isNavigationBarHidden = isNavigationBarHidden
-        }
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        isLightStatusBar ? .lightContent : .darkContent
     }
 
     func showLoading(_ isActive: Bool) {
-        loadingView.isHidden = !isActive
-        if isActive {
-            activityIndicatiorView.startAnimating()
-            view.bringSubviewToFront(loadingView)
-            view.bringSubviewToFront(activityIndicatiorView)
-        } else {
-            view.sendSubviewToBack(activityIndicatiorView)
-            view.sendSubviewToBack(loadingView)
-            activityIndicatiorView.stopAnimating()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.activityIndicatorContainer.isHidden = !isActive
+            self.navigationController?.navigationBar.isUserInteractionEnabled = !isActive
+            self.view.isUserInteractionEnabled = !isActive
+            if isActive {
+                self.activityIndicator.startAnimating()
+                self.view.bringSubviewToFront(self.activityIndicatorContainer)
+                self.view.bringSubviewToFront(self.activityIndicator)
+            } else {
+                self.view.sendSubviewToBack(self.activityIndicator)
+                self.view.sendSubviewToBack(self.activityIndicatorContainer)
+                self.activityIndicator.stopAnimating()
+            }
         }
     }
     
-}
+    func showAlert(title: String, message: String, style: UIAlertController.Style) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
 
+        alertController.addAction(
+            UIAlertAction(title: "OK!", style: .destructive) { _ in
+                alertController.dismiss(animated: true)
+            }
+        )
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showAlertWithMultipleAction(title: String, message: String, style: UIAlertController.Style, completion: @escaping () -> Void) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+
+        alertController.addAction(
+            UIAlertAction(title: "Yes", style: .destructive) { _ in
+                completion()
+            }
+        )
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+}

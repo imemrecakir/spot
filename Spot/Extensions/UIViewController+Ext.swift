@@ -16,8 +16,7 @@ extension UIViewController {
     func showToast(message: String, duration: TimeInterval, type: ToastType) {
         let toastLabel = UILabel(frame: CGRect(x: 24, y: view.frame.height - 100, width: view.frame.size.width - 48, height: 48))
         toastLabel.backgroundColor = .black.withAlphaComponent(0.6)
-        
-        toastLabel.font = Fonts.semiBold.of(.size18)
+        toastLabel.font = UIFont.systemFont(ofSize: 18)
         toastLabel.textAlignment = .center
         toastLabel.text = message
         toastLabel.alpha = 1.0
@@ -27,13 +26,13 @@ extension UIViewController {
         switch type {
         case .success:
             toastLabel.textColor = .white
-            toastLabel.backgroundColor = Colors.success
+            toastLabel.backgroundColor = .systemGreen
         case .error:
             toastLabel.textColor = .white
-            toastLabel.backgroundColor = Colors.error
+            toastLabel.backgroundColor = .systemRed
         case .alert:
             toastLabel.textColor = .white
-            toastLabel.backgroundColor = Colors.darkGray
+            toastLabel.backgroundColor = .systemGray
         }
 
         self.view.addSubview(toastLabel)

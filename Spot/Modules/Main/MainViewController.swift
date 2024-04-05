@@ -7,51 +7,50 @@
 
 import UIKit
 
-class MainViewController: UITabBarController {
-    
-    let seperator: CALayer = {
+final class MainViewController: UITabBarController {
+
+    private lazy var seperator: CALayer = {
         let seperator = CALayer()
         seperator.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 1)
-        seperator.backgroundColor = Colors.whiteSmoke.cgColor
+        seperator.backgroundColor = UIColor.quaternaryLabel.cgColor
         return seperator
     }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tabBar.tintColor = Colors.green
-        tabBar.unselectedItemTintColor = Colors.placeholder
-        tabBar.layer.addSublayer(seperator)
-        viewControllers = [
-            setupViewController(rootViewController: FeedViewController(),
-                                title: "Feed",
-                                image: "house"),
-            setupViewController(rootViewController: SearchViewController(),
-                                title: "Search",
-                                image: "magnifyingglass"),
-            setupViewController(rootViewController: AddViewController(),
-                                title: "Add",
-                                image: "plus"),
-            setupViewController(rootViewController: NotificationsViewController(),
-                                title: "Notifications",
-                                image: "bell"),
-            setupViewController(rootViewController: SettingsViewController(),
-                                title: "Settings",
-                                image: "gear")
-        ]
-        
-        setNeedsStatusBarAppearanceUpdate()
-        NavigationManager.navController.isNavigationBarHidden = true
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    private func setupViewController(rootViewController: UIViewController, title: String, image: String) -> BaseNavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tabBar.tintColor = .tintColor
+        tabBar.unselectedItemTintColor = .darkGray
+        tabBar.backgroundColor = .secondarySystemBackground
+        tabBar.layer.addSublayer(seperator)
+        viewControllers = [
+            setupViewController(with: FeedRouter().initialViewController,
+                                title: "Feed",
+                                imageName: "house"),
+            setupViewController(with: SearchRouter().initialViewController,
+                                title: "Search",
+                                imageName: "magnifyingglass"),
+            setupViewController(with: AddRouter().initialViewController,
+                                title: "Add",
+                                imageName: "plus"),
+            setupViewController(with: NotificationsRouter().initialViewController,
+                                title: "Notifications",
+                                imageName: "bell"),
+            setupViewController(with: SettingsRouter().initialViewController,
+                                title: "Settings",
+                                imageName: "gearshape")
+        ]
+    }
+    
+    private func setupViewController(with rootViewController: UIViewController, title: String, imageName: String) -> UINavigationController {
         rootViewController.tabBarItem.title = title
-        rootViewController.tabBarItem.image = UIImage(systemName: image)
+        rootViewController.tabBarItem.image = UIImage(systemName: imageName)
         rootViewController.title = title
-        return BaseNavigationController(rootViewController: rootViewController)
+        return UINavigationController(rootViewController: rootViewController)
     }
 }
+

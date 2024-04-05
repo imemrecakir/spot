@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303373C02A65D812008B76A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303373BF2A65D812008B76A4 /* LoginViewController.swift */; };
+		303373C22A65D826008B76A4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303373C12A65D826008B76A4 /* LoginViewModel.swift */; };
+		303373C42A65D837008B76A4 /* LoginDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303373C32A65D837008B76A4 /* LoginDataController.swift */; };
 		304F47132A56D8C200AE6DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47122A56D8C200AE6DB5 /* AppDelegate.swift */; };
 		304F47152A56D8C200AE6DB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47142A56D8C200AE6DB5 /* SceneDelegate.swift */; };
 		304F47172A56D8C200AE6DB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47162A56D8C200AE6DB5 /* MainViewController.swift */; };
@@ -34,11 +37,19 @@
 		304F47772A57630D00AE6DB5 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47762A57630D00AE6DB5 /* FeedViewModel.swift */; };
 		304F47792A57636500AE6DB5 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F47782A57636500AE6DB5 /* NotificationsViewController.swift */; };
 		304F477B2A57636C00AE6DB5 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F477A2A57636C00AE6DB5 /* NotificationsViewModel.swift */; };
-		304F477D2A5763DE00AE6DB5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F477C2A5763DE00AE6DB5 /* MainViewModel.swift */; };
 		304F477F2A5798C300AE6DB5 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F477E2A5798C300AE6DB5 /* UIApplication+Ext.swift */; };
+		30E8D9192BC08F4F005D7797 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E8D9182BC08F4F005D7797 /* LoginRouter.swift */; };
+		30E8D91B2BC09071005D7797 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E8D91A2BC09071005D7797 /* FeedRouter.swift */; };
+		30E8D91D2BC090B5005D7797 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E8D91C2BC090B5005D7797 /* SearchRouter.swift */; };
+		30E8D91F2BC090E9005D7797 /* AddRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E8D91E2BC090E9005D7797 /* AddRouter.swift */; };
+		30E8D9212BC09136005D7797 /* NotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E8D9202BC09136005D7797 /* NotificationsRouter.swift */; };
+		30E8D9232BC09178005D7797 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E8D9222BC09178005D7797 /* SettingsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303373BF2A65D812008B76A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		303373C12A65D826008B76A4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		303373C32A65D837008B76A4 /* LoginDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataController.swift; sourceTree = "<group>"; };
 		304F470F2A56D8C200AE6DB5 /* Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304F47122A56D8C200AE6DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304F47142A56D8C200AE6DB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +79,13 @@
 		304F47762A57630D00AE6DB5 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		304F47782A57636500AE6DB5 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		304F477A2A57636C00AE6DB5 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
-		304F477C2A5763DE00AE6DB5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		304F477E2A5798C300AE6DB5 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
+		30E8D9182BC08F4F005D7797 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		30E8D91A2BC09071005D7797 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		30E8D91C2BC090B5005D7797 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		30E8D91E2BC090E9005D7797 /* AddRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRouter.swift; sourceTree = "<group>"; };
+		30E8D9202BC09136005D7797 /* NotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRouter.swift; sourceTree = "<group>"; };
+		30E8D9222BC09178005D7797 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +122,10 @@
 				304F472C2A57004C00AE6DB5 /* Core */,
 				304F472B2A57004700AE6DB5 /* Extensions */,
 				304F472A2A57003E00AE6DB5 /* Modules */,
+				304F472D2A57005300AE6DB5 /* Utilities */,
 				304F47322A5700B200AE6DB5 /* Network */,
 				304F472E2A57007900AE6DB5 /* Styles */,
 				304F47292A57001C00AE6DB5 /* SupportedFiles */,
-				304F472D2A57005300AE6DB5 /* Utilities */,
 			);
 			path = Spot;
 			sourceTree = "<group>";
@@ -207,6 +223,10 @@
 		304F47332A5700C600AE6DB5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				303373BF2A65D812008B76A4 /* LoginViewController.swift */,
+				303373C12A65D826008B76A4 /* LoginViewModel.swift */,
+				303373C32A65D837008B76A4 /* LoginDataController.swift */,
+				30E8D9182BC08F4F005D7797 /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -216,6 +236,7 @@
 			children = (
 				304F476C2A5761C500AE6DB5 /* SettingsViewController.swift */,
 				304F476E2A5761E200AE6DB5 /* SettingsViewModel.swift */,
+				30E8D9222BC09178005D7797 /* SettingsRouter.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -225,6 +246,7 @@
 			children = (
 				304F47742A57630600AE6DB5 /* FeedViewController.swift */,
 				304F47762A57630D00AE6DB5 /* FeedViewModel.swift */,
+				30E8D91A2BC09071005D7797 /* FeedRouter.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -233,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				304F47162A56D8C200AE6DB5 /* MainViewController.swift */,
-				304F477C2A5763DE00AE6DB5 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -250,6 +271,7 @@
 			children = (
 				304F47682A5760FE00AE6DB5 /* SearchViewController.swift */,
 				304F476A2A57616000AE6DB5 /* SearchViewModel.swift */,
+				30E8D91C2BC090B5005D7797 /* SearchRouter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -259,6 +281,7 @@
 			children = (
 				304F47702A57622B00AE6DB5 /* AddViewController.swift */,
 				304F47722A57623E00AE6DB5 /* AddViewModel.swift */,
+				30E8D91E2BC090E9005D7797 /* AddRouter.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -268,6 +291,7 @@
 			children = (
 				304F47782A57636500AE6DB5 /* NotificationsViewController.swift */,
 				304F477A2A57636C00AE6DB5 /* NotificationsViewModel.swift */,
+				30E8D9202BC09136005D7797 /* NotificationsRouter.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -300,7 +324,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					304F470E2A56D8C200AE6DB5 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -342,13 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303373C02A65D812008B76A4 /* LoginViewController.swift in Sources */,
 				304F47752A57630600AE6DB5 /* FeedViewController.swift in Sources */,
+				30E8D91F2BC090E9005D7797 /* AddRouter.swift in Sources */,
 				304F47732A57623E00AE6DB5 /* AddViewModel.swift in Sources */,
 				304F47172A56D8C200AE6DB5 /* MainViewController.swift in Sources */,
+				30E8D91D2BC090B5005D7797 /* SearchRouter.swift in Sources */,
 				304F47402A5701A500AE6DB5 /* Colors.swift in Sources */,
 				304F47712A57622B00AE6DB5 /* AddViewController.swift in Sources */,
 				304F47792A57636500AE6DB5 /* NotificationsViewController.swift in Sources */,
+				30E8D9212BC09136005D7797 /* NotificationsRouter.swift in Sources */,
 				304F47632A575FCA00AE6DB5 /* UIViewController+Ext.swift in Sources */,
+				30E8D9192BC08F4F005D7797 /* LoginRouter.swift in Sources */,
 				304F47692A5760FE00AE6DB5 /* SearchViewController.swift in Sources */,
 				304F47462A5701CA00AE6DB5 /* Icons.swift in Sources */,
 				304F476D2A5761C500AE6DB5 /* SettingsViewController.swift in Sources */,
@@ -356,12 +385,15 @@
 				304F476B2A57616000AE6DB5 /* SearchViewModel.swift in Sources */,
 				304F47652A57602500AE6DB5 /* UIResponder+Ext.swift in Sources */,
 				304F477B2A57636C00AE6DB5 /* NotificationsViewModel.swift in Sources */,
+				303373C42A65D837008B76A4 /* LoginDataController.swift in Sources */,
 				304F47152A56D8C200AE6DB5 /* SceneDelegate.swift in Sources */,
 				304F47672A5760BC00AE6DB5 /* BaseRouter.swift in Sources */,
 				304F47772A57630D00AE6DB5 /* FeedViewModel.swift in Sources */,
-				304F477D2A5763DE00AE6DB5 /* MainViewModel.swift in Sources */,
 				304F475F2A575BB100AE6DB5 /* BaseViewController.swift in Sources */,
+				30E8D9232BC09178005D7797 /* SettingsRouter.swift in Sources */,
+				30E8D91B2BC09071005D7797 /* FeedRouter.swift in Sources */,
 				304F47612A575BC900AE6DB5 /* BaseViewModel.swift in Sources */,
+				303373C22A65D826008B76A4 /* LoginViewModel.swift in Sources */,
 				304F47592A57593B00AE6DB5 /* UIColor+Ext.swift in Sources */,
 				304F476F2A5761E200AE6DB5 /* SettingsViewModel.swift in Sources */,
 				304F475D2A575B8B00AE6DB5 /* BaseNavigationController.swift in Sources */,
@@ -422,6 +454,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -482,6 +515,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -515,10 +549,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,10 +584,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
